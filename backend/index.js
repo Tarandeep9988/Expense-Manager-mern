@@ -1,8 +1,13 @@
-const express = require('express'); 
-const morgan = require('morgan');
-require('dotenv').config();
+import dbConnect from './config/db.js';
+import express from 'express';
+import morgan from 'morgan';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
+// Connection to db
+await dbConnect();
 
 app.use(morgan('dev'));
 
