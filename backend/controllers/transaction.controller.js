@@ -1,5 +1,5 @@
-import Transaction from "../models/transaction.model";
-import User from "../models/user.model";
+import Transaction from "../models/transaction.model.js";
+import User from "../models/user.model.js";
 
 
 export const addTransaction = async (req, res) => {
@@ -167,7 +167,7 @@ export const deleteTransaction = async (req, res) => {
   }
 };
 
-export const updateTransactionController = async (req, res) => {
+export const updateTransaction = async (req, res) => {
   try {
     const transactionId = req.params.id;
 
