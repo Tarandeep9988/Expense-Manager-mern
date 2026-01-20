@@ -90,7 +90,7 @@ export const getAllTransactions = async (req, res) => {
     }
 
     // Add date conditions based on 'frequency' and 'custom' range
-    if (frequency !== 'custom') {
+    if (frequency && frequency !== 'custom') {
       query.date = {
         $gt: new Date(Date.now() - Number(frequency) * 24 * 60 * 60 * 1000),
       };

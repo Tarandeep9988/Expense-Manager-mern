@@ -21,7 +21,7 @@ const page = () => {
     .then((data) => {
       console.log(data);
       // Handle successful login (e.g., store token, redirect)
-      window.localStorage.setItem("userId", data.user._id);
+      window.localStorage.setItem("user", JSON.stringify(data.user));
       window.location.href = "/";
     })
     .catch((error) => {

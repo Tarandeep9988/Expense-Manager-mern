@@ -15,7 +15,7 @@ await dbConnect();
 
 
 const allowedOrigins = [
-  "*"
+  "http://localhost:3000",
 ];
 
 // Middleware
